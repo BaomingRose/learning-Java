@@ -1,0 +1,84 @@
+JDK	java开发工具包(内置JRE)
+JRE java运行时环境(包含JVM java虚拟机)
+
+1.创建一个放代码的目录
+2.右键- > 新建文件 -> 文本文件
+3. 确保可以看到文件的后缀名
+4. 整体改名为 HelloWorldApp.java  	文件类型应显示 java 源文件
+5. 用notepad++  打开文件，编写程序，记得保存
+
+6.编译
+先打开cmd 命令， 切换到源代码所在目录（比如 E:\JavaCode， 建议不带中文和空格）
+cmd 一开始是C盘 	切E盘       E： 回车
+进到所在目录		cd JavaCode
+E:\JavaCode> 表示进来了
+
+查看该目录下的文件
+dir
+
+清屏 cls
+
+编译：		javac -encoding UTF-8 源代码的名称（HelloWorldApp.jaca)
+编译后会生成一个 HelloWorldApp.class的文件（字节码文件bytecode）（给JVM看的）
+		可能会编译错误
+
+运行：	java 类名称	java HelloWorldApp
+			（可能运行时错误）
+重点（规定）：源代码中class后边的名称 要和 文件名一样
+规范  文件名按照 每个单词首字母大写的方式命名
+
+JDK(Java Development Kit)  Java 开发工具包
+	javac  Compiler(编译器)
+JRE(Java Runtime Environment)  Java 运行环境
+JVM（Java Virtual Machine)   Java 虚拟机（一次编写，多次执行）
+
+
+
+面向对象  Oriented Object
+	对象（Object）  生活的具体物象的抽象  真正的自行车在这里
+	1.状态   （属性）
+	2.行为	（方法）
+
+	类生成对象（Class） 定义对象的蓝图（设计图）
+‘好处：封装性
+	区分了服务的内与外
+	点外卖的时候，可以说多加辣，但不能跑过去自己多加辣
+
+
+简单的源代码格式：
+
+public class 类名称 {
+	//java的入口函数（方法）
+	public static void main(Sring[] args) {
+		//写代码的位置
+		for(int i = 0; i < 10; i++) {
+			//字符串的 + 运算就是字符串拼接
+			System.out.println("Hello" + i );
+		}
+		System.out.println("中文 或者 英文"):
+	}
+}
+public访问权限控制
+创建main方法，参数是一个"字符串数组" 表示命令行参数
+static表示main方法是一个静态方法（表示当前方法是一个类方法，而不是实例方法）
+System Java中内置的一个和系统相关的包
+out 和输出相关的类
+println(自带换行)/print(不带换行符)/printf
+
+
+类名称要和文件名一样（规定）
+类名称要用英文，不要用中文和拼音，要用英文，每个单词的首字母大写（规范）
+
+VSCode使用注意	(ctrl + `打开终端)
+a.先去把代码的目录创建好,然后在VSCode中“打开目录”
+b.创建文件 创建的文件名一定是.java后缀
+c.代码编译之前一定先保存 
+d.java Test: Test类无法加载……
+		首先检查Test.class有没有生成,其次检查自己代码是否保存
+
+小驼峰命名法:除了第一个单词其他单词首字母都大写（变量和方法）
+大驼峰命名法:所有单词首字母都大写(类)
+用下划线分割多个单词命名方式unix-like命名法
+
+
+
